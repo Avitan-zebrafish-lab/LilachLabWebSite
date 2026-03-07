@@ -303,9 +303,7 @@ main {
 
 .team-card .photo {
   width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  background: #e8e8e8;
+  height: auto;
   margin: 0 auto 1rem;
   overflow: hidden;
   display: flex;
@@ -531,7 +529,7 @@ footer p {
 
   .team-card .photo {
     width: 120px;
-    height: 120px;
+    height: auto;
   }
 
   .contact-content .contact-item {
