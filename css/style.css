@@ -548,6 +548,50 @@ main {
   flex: 1;
 }
 
+/* ===== LAB NEWS ===== */
+.news-entry {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.news-entry:last-child {
+  border-bottom: none;
+}
+
+.news-photo {
+  flex-shrink: 0;
+  width: 300px;
+}
+
+.news-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.news-text {
+  flex: 1;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  line-height: 1.85;
+}
+
+@media (max-width: 768px) {
+  .news-entry {
+    flex-direction: column;
+  }
+
+  .news-photo {
+    width: 100%;
+  }
+}
+
 /* ===== TEACHING ===== */
 .teaching-list {
   list-style: none;
