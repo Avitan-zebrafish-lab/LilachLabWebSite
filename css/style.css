@@ -1,0 +1,547 @@
+/* ===== FONTS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ===== RESET & BASE ===== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', 'Avenir Next', sans-serif;
+  color: #1a1a1a;
+  background-color: #fff;
+  line-height: 1.7;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: #1a1a1a;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #555;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== HEADER & NAVIGATION ===== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.nav-top {
+  padding: 1.5rem 3rem 0.5rem;
+  text-align: center;
+}
+
+.nav-top .lab-name {
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #1a1a1a;
+}
+
+.nav-top .lab-name a {
+  color: inherit;
+}
+
+.nav-top .lab-tagline {
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  margin-top: 0.1rem;
+}
+
+.nav-top .lab-subtitle {
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: #888;
+  margin-top: 0.2rem;
+}
+
+nav {
+  width: 100%;
+  border-top: 1px solid #e8e8e8;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+nav ul li {
+  flex: 1;
+  text-align: center;
+}
+
+nav ul li a {
+  display: block;
+  padding: 0.85rem 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 1px;
+  background: #1a1a1a;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+  width: 60%;
+}
+
+nav ul li a:hover {
+  color: #555;
+}
+
+nav ul li a.active {
+  color: #000;
+  font-weight: 600;
+}
+
+/* Hamburger */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  position: absolute;
+  right: 1.5rem;
+  top: 1.2rem;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: #1a1a1a;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle.open span:nth-child(1) {
+  transform: rotate(45deg) translate(4px, 5px);
+}
+
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(4px, -5px);
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+  margin-top: 140px;
+  min-height: calc(100vh - 140px - 80px);
+}
+
+.page-section {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 3rem 2rem 4rem;
+}
+
+/* ===== HOME PAGE ===== */
+.hero {
+  width: 100%;
+  padding: 4rem 3rem;
+  background: #fafafa;
+  text-align: center;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.hero .tagline {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #777;
+  letter-spacing: 0.05em;
+}
+
+.home-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 2rem 4rem;
+}
+
+.home-content h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+}
+
+.home-content p {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: #444;
+  margin-bottom: 1.2rem;
+}
+
+/* ===== PUBLICATIONS ===== */
+.publications-list {
+  list-style: none;
+  padding: 0;
+}
+
+.publications-list li {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.publications-list li:last-child {
+  border-bottom: none;
+}
+
+.pub-year {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #999;
+  margin-bottom: 0.4rem;
+}
+
+.pub-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 0.3rem;
+  line-height: 1.5;
+}
+
+.pub-title a {
+  color: #1a1a1a;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.pub-title a:hover {
+  border-bottom-color: #999;
+}
+
+.pub-authors {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 0.2rem;
+}
+
+.pub-authors strong {
+  color: #1a1a1a;
+}
+
+.pub-journal {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #888;
+}
+
+/* ===== TEAM ===== */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2.5rem;
+  margin-top: 1rem;
+}
+
+.team-card {
+  text-align: center;
+}
+
+.team-card .photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: #e8e8e8;
+  margin: 0 auto 1rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-card .photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-card .photo .placeholder {
+  font-size: 2.5rem;
+  color: #bbb;
+}
+
+.team-card h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.2rem;
+}
+
+.team-card .role {
+  font-size: 0.8rem;
+  color: #888;
+  letter-spacing: 0.05em;
+}
+
+/* ===== CONTACT ===== */
+.contact-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-content .contact-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  gap: 1rem;
+}
+
+.contact-content .contact-item:last-child {
+  border-bottom: none;
+}
+
+.contact-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #999;
+  min-width: 100px;
+}
+
+.contact-value {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.contact-value a {
+  color: #444;
+  border-bottom: 1px solid #ccc;
+}
+
+.contact-value a:hover {
+  color: #000;
+  border-bottom-color: #000;
+}
+
+/* ===== GALLERY (Lab Life) ===== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-grid .gallery-item {
+  aspect-ratio: 4/3;
+  background: #f0f0f0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #bbb;
+  font-size: 0.85rem;
+}
+
+.gallery-grid .gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-grid .gallery-item:hover img {
+  transform: scale(1.03);
+}
+
+/* ===== MEDIA ===== */
+.media-list {
+  list-style: none;
+  padding: 0;
+}
+
+.media-list li {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.media-list li:last-child {
+  border-bottom: none;
+}
+
+.media-list a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.media-list a:hover {
+  border-bottom-color: #999;
+}
+
+.media-list .media-source {
+  display: block;
+  font-size: 0.8rem;
+  color: #999;
+  margin-top: 0.3rem;
+}
+
+/* ===== EMPTY PAGE PLACEHOLDER ===== */
+.placeholder-content {
+  text-align: center;
+  padding: 5rem 2rem;
+  color: #bbb;
+}
+
+.placeholder-content p {
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  border-top: 1px solid #e0e0e0;
+  padding: 2rem 3rem;
+  text-align: center;
+  background: #fafafa;
+}
+
+footer p {
+  font-size: 0.75rem;
+  color: #999;
+  letter-spacing: 0.05em;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .nav-top {
+    padding: 1rem 1.5rem 0.3rem;
+  }
+
+  .nav-top .lab-name {
+    font-size: 1.2rem;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    border-top: 1px solid #e8e8e8;
+  }
+
+  nav ul.open {
+    display: flex;
+  }
+
+  nav ul li {
+    flex: none;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  nav ul li a {
+    padding: 0.75rem 1.5rem;
+    text-align: left;
+    font-size: 0.8rem;
+  }
+
+  nav ul li a::after {
+    display: none;
+  }
+
+  main {
+    margin-top: 120px;
+  }
+
+  .hero {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .page-section {
+    padding: 2rem 1.5rem 3rem;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .team-card .photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .contact-content .contact-item {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
