@@ -231,6 +231,86 @@ main {
   margin-bottom: 1.2rem;
 }
 
+.home-photo {
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.home-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== RESEARCH ===== */
+.research-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.research-title:first-child {
+  padding-top: 1rem;
+}
+
+.research-title:last-child {
+  border-bottom: none;
+}
+
+.research-description {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: #444;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.research-video {
+  padding: 1rem 0 0.5rem;
+}
+
+.research-video video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.research-video--compact {
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem 0;
+}
+
+.research-video.research-video--compact video {
+  width: 50%;
+}
+
+.research-video--white {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem 0;
+}
+
+.research-video--white video {
+  clip-path: inset(0 2px 0 0);
+}
+
+.research-video.research-video--white video {
+  width: 40%;
+}
+
+.research-video.research-video--large video {
+  width: 70%;
+}
+
 /* ===== PUBLICATIONS ===== */
 .publications-list {
   list-style: none;
@@ -380,19 +460,20 @@ main {
 /* ===== GALLERY (Lab Life) ===== */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem 1.5rem;
 }
 
 .gallery-grid .gallery-item {
-  aspect-ratio: 4/3;
-  background: #f0f0f0;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: #fff;
   color: #bbb;
   font-size: 0.85rem;
+  overflow: visible;
+}
+
+.gallery-grid .gallery-item img {
+  aspect-ratio: 4/3;
+  object-fit: cover;
 }
 
 .gallery-grid .gallery-item img {
@@ -404,6 +485,14 @@ main {
 
 .gallery-grid .gallery-item:hover img {
   transform: scale(1.03);
+}
+
+.gallery-caption {
+  font-size: 0.8rem;
+  color: #888;
+  text-align: center;
+  padding: 0.5rem 0;
+  letter-spacing: 0.05em;
 }
 
 /* ===== MEDIA ===== */
@@ -438,6 +527,56 @@ main {
   font-size: 0.8rem;
   color: #999;
   margin-top: 0.3rem;
+}
+
+.media-entry {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.media-logo {
+  flex-shrink: 0;
+}
+
+.media-logo--dual {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.media-info {
+  flex: 1;
+}
+
+/* ===== TEACHING ===== */
+.teaching-list {
+  list-style: none;
+  padding: 0;
+}
+
+.teaching-entry {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.teaching-entry:last-child {
+  border-bottom: none;
+}
+
+.course-number {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #999;
+}
+
+.course-name {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1a1a1a;
 }
 
 /* ===== EMPTY PAGE PLACEHOLDER ===== */
