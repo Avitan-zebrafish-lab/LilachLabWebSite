@@ -563,7 +563,7 @@ main {
 
 .news-photo {
   flex-shrink: 0;
-  width: 300px;
+  width: 200px;
 }
 
 .news-photo img {
