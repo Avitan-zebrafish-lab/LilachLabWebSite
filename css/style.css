@@ -65,6 +65,15 @@ header {
   color: inherit;
 }
 
+.nav-top .lab-tagline {
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  margin-top: 0.1rem;
+}
+
 .nav-top .lab-subtitle {
   font-size: 0.75rem;
   font-weight: 400;
