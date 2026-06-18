@@ -270,6 +270,24 @@ main {
   border-bottom: 2px solid #ccc;
 }
 
+.research-description:has(+ .research-paper) {
+  padding-bottom: 0.75rem;
+  border-bottom: none;
+}
+
+.research-paper {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #555;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #ccc;
+}
+
+.research-paper a {
+  font-style: italic;
+  color: #1a1a1a;
+}
+
 .research-video {
   padding: 1rem 0 0.5rem;
 }
